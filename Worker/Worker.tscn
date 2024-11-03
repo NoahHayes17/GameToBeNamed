@@ -1,0 +1,270 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkviehaykg1j4"]
+
+[ext_resource type="Script" path="res://Bandaged/Bandaged.gd" id="1_oakuv"]
+[ext_resource type="Texture2D" uid="uid://du04xa8e4fc4" path="res://assets/indian/Screenshot 2024-11-01 at 20.47.04.png" id="2_2syqe"]
+[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Adventurer.ttf" id="3_p02cx"]
+[ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/PatchRegular.png" id="4_4omhs"]
+[ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/PatchInverted.png" id="5_3nmls"]
+[ext_resource type="Texture2D" uid="uid://bdyewgn23vr1u" path="res://assets/Flag.png" id="5_6fca0"]
+[ext_resource type="Texture2D" uid="uid://cbst0uybb62i3" path="res://Screenshot 2024-11-03 at 20.26.00.png" id="7_4vnn2"]
+[ext_resource type="Texture2D" uid="uid://bv3hibxyrptgy" path="res://assets/Screenshot 2024-11-03 at 20.22.36.png" id="7_vj0wp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sl4s4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m00xj"]
+draw_center = false
+border_width_top = 7
+
+[node name="DialogueScene" type="Node2D"]
+script = ExtResource("1_oakuv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -456.0
+offset_top = -886.0
+offset_right = 3815.0
+offset_bottom = 3154.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.501961, 0.501961, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -223.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sl4s4")
+
+[node name="Panel" type="Panel" parent="ColorRect/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -28.0
+offset_right = 3.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m00xj")
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 3840.0
+offset_right = 680.0
+offset_bottom = 4026.0
+texture_normal = ExtResource("4_4omhs")
+texture_pressed = ExtResource("5_3nmls")
+texture_hover = ExtResource("5_3nmls")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/TextureButton"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 23.0
+offset_right = 593.0
+offset_bottom = 158.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Start [/center]"
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/TextureButton"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 36.0
+offset_right = 187.0
+offset_bottom = 134.0
+texture = ExtResource("5_6fca0")
+
+[node name="TextureButton2" type="TextureButton" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 3582.0
+offset_top = 3852.0
+offset_right = 4192.0
+offset_bottom = 4008.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_3nmls")
+texture_pressed = ExtResource("5_3nmls")
+texture_hover = ExtResource("5_3nmls")
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/TextureButton2"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 13.0
+offset_right = 617.0
+offset_bottom = 156.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]11:49 PM[/center]"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+offset_left = -453.0
+offset_top = -912.0
+offset_right = 3820.0
+offset_bottom = 2917.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("7_4vnn2")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -108.0
+offset_top = -585.0
+offset_right = 3426.0
+offset_bottom = 2414.0
+texture = ExtResource("7_vj0wp")
+expand_mode = 2
+
+[node name="NPC" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_right = 1663.0
+offset_bottom = 2309.0
+texture = ExtResource("2_2syqe")
+
+[node name="NPCTextBackground" type="ColorRect" parent="."]
+offset_left = 1724.0
+offset_top = 70.0
+offset_right = 3284.0
+offset_bottom = 493.0
+color = Color(0, 0.0313726, 0.0509804, 0.894118)
+
+[node name="PlayerTextBackground" type="ColorRect" parent="."]
+offset_left = 1723.0
+offset_top = 644.0
+offset_right = 3284.0
+offset_bottom = 1060.0
+color = Color(0, 0.0313726, 0.0509804, 0.862745)
+
+[node name="InspectEyeBackground" type="ColorRect" parent="."]
+offset_left = 1735.0
+offset_top = 1237.0
+offset_right = 2446.0
+offset_bottom = 1403.0
+color = Color(0, 0.0313726, 0.0509804, 0.862745)
+
+[node name="RejectBackground" type="ColorRect" parent="."]
+offset_left = 3017.0
+offset_top = 2128.0
+offset_right = 3332.0
+offset_bottom = 2297.0
+color = Color(0, 0.0313726, 0.0509804, 0.862745)
+
+[node name="AcceptBackground" type="ColorRect" parent="."]
+offset_left = 1739.0
+offset_top = 2135.0
+offset_right = 2057.0
+offset_bottom = 2301.0
+color = Color(0, 0.0313726, 0.0509804, 0.862745)
+
+[node name="NPCText" type="RichTextLabel" parent="."]
+offset_left = 1767.0
+offset_top = 119.0
+offset_right = 3244.0
+offset_bottom = 438.0
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+
+[node name="Advance" type="Button" parent="."]
+offset_left = 1728.0
+offset_top = 649.0
+offset_right = 3289.0
+offset_bottom = 1023.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Advance"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 59.0
+offset_right = 1520.0
+offset_bottom = 370.0
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave][center]next[/center]"
+
+[node name="InspectEye" type="Button" parent="."]
+offset_left = 1729.0
+offset_top = 1236.0
+offset_right = 2411.0
+offset_bottom = 1404.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InspectEye"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 31.0
+offset_right = 681.0
+offset_bottom = 139.0
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]Inspect eye[/center]"
+
+[node name="Accept" type="Button" parent="."]
+offset_left = 1742.0
+offset_top = 2167.0
+offset_right = 2055.0
+offset_bottom = 2277.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Accept"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 5.0
+offset_right = 11.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]Accept[/center]"
+
+[node name="Reject" type="Button" parent="."]
+offset_left = 3023.0
+offset_top = 2128.0
+offset_right = 3336.0
+offset_bottom = 2296.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Reject"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 39.0
+offset_right = 304.0
+offset_bottom = 149.0
+theme_override_fonts/normal_font = ExtResource("3_p02cx")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[center]Reject[/center]"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1681, 1176)
+zoom = Vector2(0.264, 0.28)
+
+[connection signal="pressed" from="Advance" to="." method="_on_advance_pressed"]
+[connection signal="pressed" from="InspectEye" to="." method="_on_inspect_eye_pressed"]
+[connection signal="pressed" from="InspectEye" to="." method="_on_inspect_pressed"]
+[connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="Reject" to="." method="_on_reject_pressed"]

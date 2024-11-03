@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ehticn2m4vs"]
+
+[ext_resource type="PackedScene" uid="uid://dkviehaykg1j4" path="res://Worker/Worker.tscn" id="1_d66y2"]
+[ext_resource type="PackedScene" uid="uid://50mu3jqb71ru" path="res://Bandaged/BandagedPopUp.tscn" id="2_p45y7"]
+[ext_resource type="Texture2D" uid="uid://d1ntmupdpkjoc" path="res://assets/whiteGuy/Screenshot 2024-11-01 at 21.05.17.png" id="2_yji3x"]
+[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Adventurer.ttf" id="4_ap5by"]
+
+[node name="DialogueScene" instance=ExtResource("1_d66y2")]
+pop_up_scene = ExtResource("2_p45y7")
+
+[node name="MarginContainer" parent="." index="1"]
+anchors_preset = 0
+offset_left = -455.0
+offset_top = -936.0
+offset_right = 3839.0
+offset_bottom = 2932.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="NPC" parent="." index="3"]
+texture = ExtResource("2_yji3x")
+
+[node name="InspectHandBackground" type="ColorRect" parent="." index="6"]
+offset_left = 2533.0
+offset_top = 1237.0
+offset_right = 3291.0
+offset_bottom = 1403.0
+color = Color(0, 0.0313726, 0.0509804, 0.862745)
+
+[node name="InspectHand" type="Button" parent="." index="13"]
+offset_left = 2538.0
+offset_top = 1230.0
+offset_right = 3293.0
+offset_bottom = 1398.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InspectHand" index="0"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 43.0
+offset_right = 713.0
+offset_bottom = 146.0
+theme_override_fonts/normal_font = ExtResource("4_ap5by")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]Inspect hand[/center]"
+
+[connection signal="pressed" from="InspectHand" to="." method="_on_inspect_eye_pressed"]
+[connection signal="pressed" from="InspectHand" to="." method="_on_inspect_pressed"]
