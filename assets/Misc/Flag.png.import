@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caowl4456vs88"
-path="res://.godot/imported/PatchInverted.png-f8d0cf9d37fe9c8fbaa30fa1207dbf1c.ctex"
+uid="uid://bdyewgn23vr1u"
+path="res://.godot/imported/Flag.png-d1a3d8d07eb0825aaca46765c5428949.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PatchInverted.png"
-dest_files=["res://.godot/imported/PatchInverted.png-f8d0cf9d37fe9c8fbaa30fa1207dbf1c.ctex"]
+source_file="res://assets/Misc/Flag.png"
+dest_files=["res://.godot/imported/Flag.png-d1a3d8d07eb0825aaca46765c5428949.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv3hibxyrptgy"
-path="res://.godot/imported/Screenshot 2024-11-03 at 20.22.36.png-a241c9d5228070252b674aba07d39fdb.ctex"
+uid="uid://dsdlx8wiorvdq"
+path="res://.godot/imported/Doctor.png-eff09ac62668e29d0de56caa1cd7932a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Screenshot 2024-11-03 at 20.22.36.png"
-dest_files=["res://.godot/imported/Screenshot 2024-11-03 at 20.22.36.png-a241c9d5228070252b674aba07d39fdb.ctex"]
+source_file="res://assets/Doctor/Doctor.png"
+dest_files=["res://.godot/imported/Doctor.png-eff09ac62668e29d0de56caa1cd7932a.ctex"]
 
 [params]
 

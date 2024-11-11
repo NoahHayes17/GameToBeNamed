@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdyewgn23vr1u"
-path="res://.godot/imported/Flag.png-47653dcbce6ad9726dae00766f6d8d5d.ctex"
+uid="uid://6xvv7xfe1mra"
+path="res://.godot/imported/PatchRegular.png-e08b5c22d8fb48639274762320da0b6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Flag.png"
-dest_files=["res://.godot/imported/Flag.png-47653dcbce6ad9726dae00766f6d8d5d.ctex"]
+source_file="res://assets/Misc/PatchRegular.png"
+dest_files=["res://.godot/imported/PatchRegular.png-e08b5c22d8fb48639274762320da0b6a.ctex"]
 
 [params]
 

@@ -1,20 +1,18 @@
 extends Node2D
 
-@export var display_time: float = 4.0
-@export var pop_up_scene_bandaged_eye = load("res://Bandaged/BandagedPopUpEye.tscn")
-@export var pop_up_scene_bandaged_vein = load("res://Bandaged/BandagedPopUpVein.tscn")
+var display_time: float = 4.0
+var pop_up_scene_eye = load("res://WhiteHair/WhiteHairPopUpEye.tscn")
+var pop_up_scene_vein = load("res://WhiteHair/WhiteHairPopUpVein.tscn")
 
 # NPC and player dialogue arrays
 var npc_dialogue_lines: Array = [
-	"So, you’re another one of the doctors, huh? Here to stare at my face?",
-	"Feeling as ‘alright’ as you can feel when you’re locked in here for days. No one’s told me anything.",
-	"Almost done? That’s what they all say.",
+	"I’ve been here for a while, doctor. Am I... am I sick?",
+	"No, I’ve  ur had it since I was a kid. A... family thing.",
 ]
 
 var player_responses: Array = [
-	"[wave]I just need to check for anything unusual. You’ve been feeling alright?[/wave]",
-	"[wave]We’re almost done here.[/wave]",
-	"[wave]Thank you for your time.[/wave]"
+	"[wave]I’m here to see if there’s anything we need to worry about. This… white hair—is it recent?[/wave]",
+	"[wave]Interesting...[/wave]",
 ]
 
 # NPC responses to acceptance and rejection
@@ -64,16 +62,16 @@ func _on_advance_pressed():
 	update_dialogue()
 
 # Shows the popup when inspect button is pressed
-func _on_inspect_bandaged_eye_pressed():
+func _on_inspect_white_hair_eye_pressed():
 	print("Inspect button pressed")
-	var new_pop_up_eye = pop_up_scene_bandaged_eye.instantiate()
+	var new_pop_up_eye = pop_up_scene_eye.instantiate()
 	new_pop_up_eye.display_time = display_time
 	add_child(new_pop_up_eye)
 	new_pop_up_eye.show()
 
-func _on_inspect_bandaged_vein_pressed():
+func _on_inspect_white_hair_vein_pressed():
 	print("Inspect button pressed")
-	var new_pop_up_vein = pop_up_scene_bandaged_vein.instantiate()
+	var new_pop_up_vein = pop_up_scene_vein.instantiate()
 	new_pop_up_vein.display_time = display_time
 	add_child(new_pop_up_vein)
 	new_pop_up_vein.show()
@@ -94,7 +92,7 @@ func _on_reject_pressed():
 
 # Function to end the scene
 func end_scene():
-	var new_scene = load("res://Girl/Girl.tscn").instantiate()
+	var new_scene = load("res://Doctor/Doctor.tscn").instantiate()
 	get_tree().root.add_child(new_scene)
 	queue_free()  # Optionally, remove the current scene if needed
 

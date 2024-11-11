@@ -1,24 +1,19 @@
-class_name Worker
 extends Node2D
 
-@export var display_time: float = 4.0
-@export var pop_up_scene = load("res://Worker/WorkerPopUp.tscn")
+var display_time: float = 4.0
+var pop_up_scene_eye = load("res://Worker/WorkerPopUpEye.tscn")
+var pop_up_scene_vein = load("res://Worker/WorkerPopUpVein.tscn")
 
 # NPC and player dialogue arrays
 var npc_dialogue_lines: Array = [
-	"",
-	"Hello! How are you?",
-	"I'm glad to see you here.",
-	"This is a simple dialogue system.",
+	"So, Doc, am I the next test subject or something? This whole ‘mystery disease’ bit sounds like a sci-fi plot, don’t you think?",
+	"Nope, as healthy as a horse! No veins, no strange hair colors. I promise.",
 ]
 
 var player_responses: Array = [
-	"[wave]I'm doing well, thank you.[/wave]",
-	"[wave]Happy to be here too.[/wave]",
-	"[wave]Interesting, tell me more![/wave]",
-	"[wave]Alright, let's proceed.[/wave]"
+	"[wave]I just need to make sure you’re healthy. Any new symptoms or unusual signs lately?[/wave]",
+	"[wave]Alright. That’s it for now. You’re good to go.[/wave]",
 ]
-
 
 # NPC responses to acceptance and rejection
 var npc_accept_response: String = "I'm glad you accepted! Let's work together!"
@@ -30,16 +25,17 @@ var current_line: int = 0
 func _ready():
 	$Advance/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$InspectEye/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Accept/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$ColorRect/TextureButton/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$ColorRect/TextureButton/TextureRect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$BackgroundCoverUp/Panel/Close/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$BackgroundCoverUp/Panel/Time/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
 # Function to update the dialogue box based on the current line
 func update_dialogue():
 	if current_line < npc_dialogue_lines.size():
-		show_text($NPCText, npc_dialogue_lines[current_line])  # Show NPC line gradually
+		show_text($NPCText/RichTextLabel, npc_dialogue_lines[current_line])  # Show NPC line gradually
 		$Advance/RichTextLabel.text = player_responses[current_line]  # Show player's response as button text
 	else:
 		end_dialogue()  # End dialogue if no more NPC lines
@@ -66,24 +62,31 @@ func _on_advance_pressed():
 	update_dialogue()
 
 # Shows the popup when inspect button is pressed
-func _on_inspect_eye_pressed():
+func _on_inspect_worker_eye_pressed():
 	print("Inspect button pressed")
-	var new_pop_up = pop_up_scene.instantiate()
-	new_pop_up.display_time = display_time
-	add_child(new_pop_up)
-	new_pop_up.show()
+	var new_pop_up_eye = pop_up_scene_eye.instantiate()
+	new_pop_up_eye.display_time = display_time
+	add_child(new_pop_up_eye)
+	new_pop_up_eye.show()
+
+func _on_inspect_worker_vein_pressed():
+	print("Inspect button pressed")
+	var new_pop_up_vein = pop_up_scene_vein.instantiate()
+	new_pop_up_vein.display_time = display_time
+	add_child(new_pop_up_vein)
+	new_pop_up_vein.show()
 
 # Accept button interaction response
 func _on_accept_pressed():
 	print("Player accepted")
-	$NPCText.text = npc_accept_response  # NPC's response to acceptance
+	$NPCText/RichTextLabel.text = npc_accept_response  # NPC's response to acceptance
 	$Advance/RichTextLabel.hide()  # Hide players text after responding
 	end_scene()
 
 # Reject button interaction response
 func _on_reject_pressed():
 	print("Player rejected")
-	$NPCText.text = npc_reject_response  # NPC's response to rejection
+	$NPCText/RichTextLabel.text = npc_reject_response  # NPC's response to rejection
 	$Advance/RichTextLabel.hide()  # Hide players text after responding
 	end_scene()
 

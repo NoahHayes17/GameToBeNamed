@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7r278m5gg1ty"]
+
+[ext_resource type="Script" path="res://Worker/WorkerPopUp.gd" id="1_1cy1m"]
+[ext_resource type="Texture2D" uid="uid://duy33p6hxh77f" path="res://assets/asianWhite/Screenshot 2024-11-01 at 22.11.23.png" id="2_uer3c"]
+
+[node name="PopUp" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1cy1m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 243.0
+offset_right = 1429.0
+offset_bottom = 1377.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 262.0
+offset_right = 1410.0
+offset_bottom = 1350.0
+texture = ExtResource("2_uer3c")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

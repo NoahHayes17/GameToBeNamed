@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bb36i8qiqdl26"
-path="res://.godot/imported/Adventurer.ttf-8b7817a6bef04c413a0b996cbc6c349e.fontdata"
+path="res://.godot/imported/Adventurer.ttf-c0b6306a89090be389fab1bbd2d36aba.fontdata"
 
 [deps]
 
-source_file="res://assets/Adventurer.ttf"
-dest_files=["res://.godot/imported/Adventurer.ttf-8b7817a6bef04c413a0b996cbc6c349e.fontdata"]
+source_file="res://assets/Misc/Adventurer.ttf"
+dest_files=["res://.godot/imported/Adventurer.ttf-c0b6306a89090be389fab1bbd2d36aba.fontdata"]
 
 [params]
 

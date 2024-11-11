@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6xvv7xfe1mra"
-path="res://.godot/imported/PatchRegular.png-87db0d8d9c837b68b202d6e39ae58965.ctex"
+uid="uid://d3kfvg3uhq6vt"
+path="res://.godot/imported/Window.png-9b6a6931a1c42cc115a7b767539f18a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PatchRegular.png"
-dest_files=["res://.godot/imported/PatchRegular.png-87db0d8d9c837b68b202d6e39ae58965.ctex"]
+source_file="res://assets/Misc/Window.png"
+dest_files=["res://.godot/imported/Window.png-9b6a6931a1c42cc115a7b767539f18a1.ctex"]
 
 [params]
 

@@ -1,20 +1,20 @@
 extends Node2D
 
-@export var display_time: float = 4.0
-@export var pop_up_scene_bandaged_eye = load("res://Bandaged/BandagedPopUpEye.tscn")
-@export var pop_up_scene_bandaged_vein = load("res://Bandaged/BandagedPopUpVein.tscn")
+var display_time: float = 4.0
+var pop_up_scene_eye = load("res://Girl/GirlPopUpEye.tscn")
+var pop_up_scene_vein = load("res://Girl/GirlPopUpVein.tscn")
 
 # NPC and player dialogue arrays
 var npc_dialogue_lines: Array = [
-	"So, you’re another one of the doctors, huh? Here to stare at my face?",
-	"Feeling as ‘alright’ as you can feel when you’re locked in here for days. No one’s told me anything.",
-	"Almost done? That’s what they all say.",
+	"Are you… are you going to send me away?",
+	"I don’t know… I just feel… tired. And they said something about my eyes. I don’t… I don’t think it’s serious, though.",
+	"Please Mister...",
 ]
 
 var player_responses: Array = [
-	"[wave]I just need to check for anything unusual. You’ve been feeling alright?[/wave]",
-	"[wave]We’re almost done here.[/wave]",
-	"[wave]Thank you for your time.[/wave]"
+	"[wave]I’m here to check on your health. Have you been feeling anything unusual?[/wave]",
+	"[wave]I'm going to just give you a quick check up[/wave]",
+	"[wave]Thank you. That’s all for now.[/wave]",
 ]
 
 # NPC responses to acceptance and rejection
@@ -64,16 +64,16 @@ func _on_advance_pressed():
 	update_dialogue()
 
 # Shows the popup when inspect button is pressed
-func _on_inspect_bandaged_eye_pressed():
+func _on_inspect_girl_eye_pressed():
 	print("Inspect button pressed")
-	var new_pop_up_eye = pop_up_scene_bandaged_eye.instantiate()
+	var new_pop_up_eye = pop_up_scene_eye.instantiate()
 	new_pop_up_eye.display_time = display_time
 	add_child(new_pop_up_eye)
 	new_pop_up_eye.show()
 
-func _on_inspect_bandaged_vein_pressed():
+func _on_inspect_girl_vein_pressed():
 	print("Inspect button pressed")
-	var new_pop_up_vein = pop_up_scene_bandaged_vein.instantiate()
+	var new_pop_up_vein = pop_up_scene_vein.instantiate()
 	new_pop_up_vein.display_time = display_time
 	add_child(new_pop_up_vein)
 	new_pop_up_vein.show()
@@ -94,7 +94,7 @@ func _on_reject_pressed():
 
 # Function to end the scene
 func end_scene():
-	var new_scene = load("res://Girl/Girl.tscn").instantiate()
+	var new_scene = load("res://WhiteHair/WhiteHair.tscn").instantiate()
 	get_tree().root.add_child(new_scene)
 	queue_free()  # Optionally, remove the current scene if needed
 
