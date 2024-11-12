@@ -1,0 +1,260 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctslsl6v5c6a6"]
+
+[ext_resource type="Script" path="res://Doctor/DoctorIntro.gd" id="1_7uala"]
+[ext_resource type="Texture2D" uid="uid://bv3hibxyrptgy" path="res://assets/Misc/Screenshot 2024-11-03 at 20.22.36.png" id="2_njxo2"]
+[ext_resource type="Texture2D" uid="uid://ghmb5x6cox5y" path="res://assets/Misc/Screenshot 2024-11-10 at 11.06.42.png" id="3_p31y2"]
+[ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="4_oj88j"]
+[ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_v5aha"]
+[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="6_0e1ww"]
+[ext_resource type="Texture2D" uid="uid://bdyewgn23vr1u" path="res://assets/Misc/Flag.png" id="7_l0hlv"]
+[ext_resource type="Texture2D" uid="uid://dsdlx8wiorvdq" path="res://assets/Doctor/Doctor.png" id="8_odob7"]
+
+[node name="DialogueScene" type="Node2D"]
+script = ExtResource("1_7uala")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -108.0
+offset_top = -585.0
+offset_right = 3426.0
+offset_bottom = 2414.0
+texture = ExtResource("2_njxo2")
+expand_mode = 2
+
+[node name="BackgroundCoverUp" type="TextureRect" parent="."]
+offset_left = -47.0
+offset_top = -512.0
+offset_right = 3372.0
+offset_bottom = 2362.0
+texture = ExtResource("3_p31y2")
+
+[node name="Panel" type="Panel" parent="BackgroundCoverUp"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 23.0
+offset_top = 22.0
+offset_right = -14.0
+offset_bottom = 327.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundCoverUp/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.660377, 0.607632, 0.60695, 1)
+
+[node name="Close" type="TextureButton" parent="BackgroundCoverUp/Panel"]
+layout_mode = 0
+offset_left = 2717.0
+offset_top = 57.0
+offset_right = 3362.0
+offset_bottom = 242.0
+texture_normal = ExtResource("4_oj88j")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundCoverUp/Panel/Close"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 23.0
+offset_right = 593.0
+offset_bottom = 158.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Close[/center]"
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundCoverUp/Panel/Close"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 36.0
+offset_right = 187.0
+offset_bottom = 134.0
+texture = ExtResource("7_l0hlv")
+
+[node name="Time" type="TextureButton" parent="BackgroundCoverUp/Panel"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 61.0
+offset_top = 54.0
+offset_right = 749.0
+offset_bottom = 234.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("5_v5aha")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundCoverUp/Panel/Time"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 13.0
+offset_right = 617.0
+offset_bottom = 156.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]11:49 PM[/center]"
+
+[node name="NPC" type="TextureRect" parent="."]
+offset_left = 12.0
+offset_top = -51.0
+offset_right = 1670.0
+offset_bottom = 2258.0
+texture = ExtResource("8_odob7")
+
+[node name="NPCText" type="TextureRect" parent="."]
+offset_left = 1729.0
+offset_top = -50.0
+offset_right = 3316.0
+offset_bottom = 507.0
+texture = ExtResource("4_oj88j")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NPCText"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 82.0
+offset_right = 1450.0
+offset_bottom = 479.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+
+[node name="Advance" type="TextureButton" parent="."]
+offset_left = 1733.0
+offset_top = 674.0
+offset_right = 3327.0
+offset_bottom = 1230.0
+texture_normal = ExtResource("4_oj88j")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Advance"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 73.0
+offset_right = 1454.0
+offset_bottom = 414.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[wave][center]Close[/center][/wave]"
+
+[node name="InspectEye" type="TextureButton" parent="."]
+visible = false
+offset_left = 2021.0
+offset_top = 1381.0
+offset_right = 3079.0
+offset_bottom = 1568.0
+texture_normal = ExtResource("4_oj88j")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InspectEye"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 1053.0
+offset_bottom = 175.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Inspect eye[/center]"
+
+[node name="InspectVein" type="TextureButton" parent="."]
+visible = false
+offset_left = 2016.0
+offset_top = 1692.0
+offset_right = 3074.0
+offset_bottom = 1886.0
+texture_normal = ExtResource("4_oj88j")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InspectVein"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 1053.0
+offset_bottom = 175.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Inspect veins[/center]"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1681, 1176)
+zoom = Vector2(0.264, 0.28)
+
+[node name="Reject" type="TextureButton" parent="."]
+visible = false
+offset_left = 2872.0
+offset_top = 2093.0
+offset_right = 3349.0
+offset_bottom = 2259.0
+texture_normal = ExtResource("4_oj88j")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Reject"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 18.0
+offset_right = 474.0
+offset_bottom = 162.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Reject[/center]"
+
+[node name="Accept" type="TextureButton" parent="."]
+visible = false
+offset_left = 1736.0
+offset_top = 2093.0
+offset_right = 2225.0
+offset_bottom = 2259.0
+texture_normal = ExtResource("4_oj88j")
+texture_pressed = ExtResource("5_v5aha")
+texture_hover = ExtResource("5_v5aha")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Accept"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 18.0
+offset_right = 474.0
+offset_bottom = 162.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_0e1ww")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Accept[/center]"
+
+[connection signal="pressed" from="Advance" to="." method="_on_advance_pressed"]
+[connection signal="pressed" from="InspectEye" to="." method="_on_inspect_bandaged_eye_pressed"]
+[connection signal="pressed" from="InspectVein" to="." method="_on_inspect_bandaged_vein_pressed"]
+[connection signal="pressed" from="Reject" to="." method="_on_reject_pressed"]
+[connection signal="pressed" from="Accept" to="." method="_on_accept_pressed"]
