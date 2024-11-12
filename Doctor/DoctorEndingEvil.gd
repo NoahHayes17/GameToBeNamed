@@ -26,8 +26,6 @@ func _ready():
 	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Accept/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$BackgroundCoverUp/Panel/Close/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$BackgroundCoverUp/Panel/Time/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
 # Function to update the dialogue box based on the current line
