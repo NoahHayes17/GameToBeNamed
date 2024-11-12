@@ -4,22 +4,18 @@ extends Node2D
 
 # NPC and player dialogue arrays
 var npc_dialogue_lines: Array = [
-	"Alright, Doctor. We have a peculiar job on our hands today. You’re here because the government needs fresh eyes, and frankly, they don’t want questions. These patients… they might carry symptoms of a newly detected disease.",
-	"Your job is to inspect each one, note any signs, and—if they show symptoms—recommend them for transport to a… specialized facility. But don’t concern yourself with what happens after. Just send anyone with symptoms their way.",
-	"Symptoms to watch for? We aren't sure yet, but I'll be back to let you know.",
-	"Patients will start coming to see you soon"
+	"All clear, huh? You flagged every single one of them.",
+	"Interesting call. Guess you thought it was better to play it safe, right? To send everyone off to that… facility. Well, I suppose that’s one way to avoid an outbreak.",
+	"Between you and me… I’d be careful about who you trust around here. That ‘special facility’—it isn’t exactly a hospital. I can’t say where they’re taking those people, but I doubt they’re getting much treatment.",
+	"Sometimes, the government decides that people are problems to be… solved, not healed. So… I hope you’re comfortable with your choice, Doctor. Those people are gone now. And maybe… maybe we’ll never know if they were truly sick."
 ]
 
 var player_responses: Array = [
-	"[wave]Morning Doctor[/wave]",
-	"[wave]mmmmph, yes, something has seemed off lately[/wave]",
-	"[wave]Ah, I see[/wave]",
-	"[wave]Alright, I'll make sure this outbreak is maintained[/wave]"
+	"[wave]I thought it was the safest option. Better than risking an outbreak, right?[/wave]",
+	"[wave]What do you mean?[/wave]",
+	"[wave]You’re saying… they’re not coming back, are they?[/wave]",
+	"[wave]...[/wave]"
 ]
-
-# NPC responses to acceptance and rejection
-var npc_accept_response: String = "I'm glad you accepted! Let's work together!"
-var npc_reject_response: String = "Oh, I see... Well, good luck then!"
 
 # Track the current dialogue line
 var current_line: int = 0
@@ -30,6 +26,8 @@ func _ready():
 	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Accept/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$BackgroundCoverUp/Panel/Close/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$BackgroundCoverUp/Panel/Time/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
 # Function to update the dialogue box based on the current line
@@ -52,8 +50,6 @@ func show_text(label: RichTextLabel, text: String) -> void:  # Accept Control as
 # Ends the dialogue and shows choice buttons
 func end_dialogue():
 	$Advance.hide()  # Hide the advance button
-	$Accept.show()  # Show the accept button
-	$Reject.show()  # Show the reject button
 
 # Advances to the next dialogue line when the player response is pressed
 func _on_advance_pressed():
@@ -64,7 +60,7 @@ func _on_advance_pressed():
 # Function to end the scene
 func end_scene():
 	var new_scene = load("res://Doctor/Doctor1.tscn").instantiate()
-	get_parent().add_child(new_scene)
+	get_tree().root.add_child(new_scene)
 	queue_free()  # Optionally, remove the current scene if needed
 
 	#get_tree().quit()

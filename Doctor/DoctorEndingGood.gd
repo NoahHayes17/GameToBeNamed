@@ -4,18 +4,18 @@ extends Node2D
 
 # NPC and player dialogue arrays
 var npc_dialogue_lines: Array = [
-	"",
-	"We have just confirmed a couple symptoms. You’re looking for white or red veins, they can be anywhere on the body.",
+	"Well… I didn’t think I’d say this, but you did it. You managed to sort them all correctly. We’ve received confirmation that each patient you flagged… well, they were carrying the markers.",
+	"Yes. Thanks to you, we’ve dodged a disaster.",
+	"I can’t say I’m happy about where they’ve ended up, but I suppose it was necessary. And thanks to you, we’ve contained whatever this… thing is. We might’ve dodged a disaster here. If there’s anyone to thank, it’s you.",
+	"Go home. Take a rest. You've done your part, Doctor.",
 ]
 
 var player_responses: Array = [
-	"[wave]Afternoon Doctor[/wave]",
-	"[wave]Thank you[/wave]",
+	"[wave]So… we contained it, right? No one else is at risk?[/wave]",
+	"[wave]I still wonder what really happened to them, though.[/wave]",
+	"[wave]...[/wave]",
+	"Thanks Doc"
 ]
-
-# NPC responses to acceptance and rejection
-var npc_accept_response: String = "I'm glad you accepted! Let's work together!"
-var npc_reject_response: String = "Oh, I see... Well, good luck then!"
 
 # Track the current dialogue line
 var current_line: int = 0
@@ -26,6 +26,8 @@ func _ready():
 	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Accept/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$BackgroundCoverUp/Panel/Close/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$BackgroundCoverUp/Panel/Time/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
 # Function to update the dialogue box based on the current line
@@ -48,8 +50,6 @@ func show_text(label: RichTextLabel, text: String) -> void:  # Accept Control as
 # Ends the dialogue and shows choice buttons
 func end_dialogue():
 	$Advance.hide()  # Hide the advance button
-	$Accept.show()  # Show the accept button
-	$Reject.show()  # Show the reject button
 
 # Advances to the next dialogue line when the player response is pressed
 func _on_advance_pressed():
@@ -59,8 +59,8 @@ func _on_advance_pressed():
 
 # Function to end the scene
 func end_scene():
-	var new_scene = load("res://Doctor2/Doctor2.tscn").instantiate()
-	get_parent().add_child(new_scene)
+	var new_scene = load("res://Doctor/DoctorEndingBad.tscn").instantiate()
+	get_tree().root.add_child(new_scene)
 	queue_free()  # Optionally, remove the current scene if needed
 
 	#get_tree().quit()
