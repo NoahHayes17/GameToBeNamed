@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d4bl21qackc6t"]
+[gd_scene load_steps=13 format=3 uid="uid://d4bl21qackc6t"]
 
 [ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="1_ii5lw"]
 [ext_resource type="Script" path="res://Desktop/desktop.gd" id="1_ot6ke"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ckkysifsblshw" path="res://icons/Microsoft Authentificator.png" id="7_n1qm5"]
 [ext_resource type="Texture2D" uid="uid://b1ia75ejdu7ri" path="res://icons/Google Files.png" id="8_w3v0h"]
 [ext_resource type="Texture2D" uid="uid://wk2bykmeprsx" path="res://icons/Google Hangouts.png" id="9_xy8hr"]
+[ext_resource type="Script" path="res://Desktop/FolderLaunch.gd" id="11_t7yam"]
 
 [node name="Desktop" type="Control"]
 layout_mode = 3
@@ -141,6 +142,7 @@ custom_minimum_size = Vector2(59.97, 0)
 layout_mode = 2
 texture_normal = ExtResource("8_w3v0h")
 stretch_mode = 0
+script = ExtResource("11_t7yam")
 
 [node name="MessagerLaunch" type="TextureButton" parent="Taskbar/HBoxContainer"]
 custom_minimum_size = Vector2(59.97, 0)

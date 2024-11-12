@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dt1j2bijyf1lj"]
+[gd_scene load_steps=9 format=3 uid="uid://xh1u1wnfknx4"]
 
 [ext_resource type="Script" path="res://Doctor/DoctorEndingBad.gd" id="1_2e3ob"]
 [ext_resource type="Texture2D" uid="uid://bv3hibxyrptgy" path="res://assets/Misc/Screenshot 2024-11-03 at 20.22.36.png" id="2_vxxvl"]

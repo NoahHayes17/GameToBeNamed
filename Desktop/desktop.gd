@@ -54,14 +54,14 @@ func _on_log_off_button_pressed():
 	day += 1
 	if day == 2:
 		messager.get_node("Control").get_child(0).queue_free()
-		var new_scene = load("res://Doctor/Doctor1.tscn").instantiate()
+		var new_scene = load("res://Doctor/DoctorFirstSymptoms.tscn").instantiate()
 		messager.get_node("Control").add_child(new_scene)
 		interview.get_node("Control").get_child(0).queue_free()
 		new_scene = load("res://WhiteHair/WhiteHair.tscn").instantiate()
 		interview.get_node("Control").add_child(new_scene)
 	if day == 3:
 		messager.get_node("Control").get_child(0).queue_free()
-		var new_scene = load("res://Doctor/Doctor2.tscn").instantiate()
+		var new_scene = load("res://Doctor/DoctorSecondSymptomsAndFolder.tscn").instantiate()
 		messager.get_node("Control").add_child(new_scene)
 		interview.get_node("Control").get_child(0).queue_free()
 		new_scene = load("res://Bandaged/Bandaged.tscn").instantiate()

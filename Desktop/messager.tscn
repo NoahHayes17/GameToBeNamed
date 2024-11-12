@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Desktop/App.gd" id="2_vj57c"]
 [ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="3_glaim"]
 [ext_resource type="Texture2D" uid="uid://h20lbm2713bs" path="res://Desktop/Sprite-0003.png" id="4_d0amb"]
-[ext_resource type="PackedScene" uid="uid://ctslsl6v5c6a6" path="res://Doctor/Doctor.tscn" id="5_xf6ud"]
+[ext_resource type="PackedScene" uid="uid://6pcqa8rkl2j2" path="res://Doctor/DoctorIntro.tscn" id="6_4yxux"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxh6j"]
 bg_color = Color(0, 0.0313726, 0.513726, 1)
@@ -75,11 +75,12 @@ text = "X"
 
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 14.1576
+offset_left = 14.0
 offset_top = 67.0
-offset_right = 54.1576
-offset_bottom = 107.0
+offset_right = 680.0
+offset_bottom = 537.0
 
-[node name="DialogueScene" parent="Control" instance=ExtResource("5_xf6ud")]
+[node name="DialogueScene" parent="Control" instance=ExtResource("6_4yxux")]
+scale = Vector2(0.2, 0.2)
 
 [connection signal="pressed" from="Title Bar/Hbox Container/Close" to="." method="_on_close_pressed"]

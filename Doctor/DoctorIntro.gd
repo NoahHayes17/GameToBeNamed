@@ -23,12 +23,6 @@ var current_line: int = 0
 
 func _ready():
 	$Advance/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$InspectEye/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$Accept/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$BackgroundCoverUp/Panel/Close/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$BackgroundCoverUp/Panel/Time/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
 # Function to update the dialogue box based on the current line
