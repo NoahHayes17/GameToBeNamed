@@ -6,6 +6,7 @@ func _ready():
 	$InspectEye/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Back/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 # Reject button interaction response
 func _on_reject_pressed():

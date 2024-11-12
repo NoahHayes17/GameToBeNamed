@@ -9,4 +9,4 @@ offset_bottom = 124.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_jc60g")
 theme_override_font_sizes/normal_font_size = 26
-text = "You have completed the patient interviews for today. You can manage your accepted patients in the Folder App."
+text = "You have completed the patient interviews for today. Make sure you followed todays instructions thoroughly. Log off to finish the day."
