@@ -95,3 +95,11 @@ func end_scene():
 	var new_scene = load("res://Girl/Girl.tscn").instantiate()
 	get_parent().add_child(new_scene)
 	queue_free()  # Optionally, remove the current scene if needed
+
+
+
+func _on_inspect_vein_pressed():
+	pass # Replace with function body.
+
+func _on_inspect_eye_pressed():
+	pass # Replace with function body.

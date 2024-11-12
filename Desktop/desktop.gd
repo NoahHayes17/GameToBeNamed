@@ -67,8 +67,14 @@ func _on_log_off_button_pressed():
 		new_scene = load("res://Bandaged/Bandaged.tscn").instantiate()
 		interview.get_node("Control").add_child(new_scene)
 	if day == 4:
-		pass
-		#ending logic using worker, white_hair vairables etc
+		if worker and not white_hair and not girl and not bandage:
+			var new_scene = load("res://Doctor/DoctorEndingGood.tscn").instantiate()
+			get_tree().root.add_child(new_scene)
+			queue_free()  # Optionally, remove the current scene if needed
+		else:
+			var new_scene = load("res://Doctor/DoctorEndingBad.tscn").instantiate()
+			get_tree().root.add_child(new_scene)
+			queue_free()  # Optionally, remove the current scene if needed
 
 func _on_interview_launch_pressed():
 	interview.show()

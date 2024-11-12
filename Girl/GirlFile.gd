@@ -1,4 +1,4 @@
-extends "res://Worker/Worker.gd"
+extends "res://Girl/Girl.gd"
 
 @onready var folder = get_parent().get_parent()
 

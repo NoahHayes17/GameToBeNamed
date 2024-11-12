@@ -24,7 +24,7 @@ func _on_white_hair_pressed():
 func _on_bandage_pressed():
 	folder.hide()
 	person.get_child(0).queue_free()
-	var new_scene = load("res://Bandaged/BandageFile.tscn").instantiate()
+	var new_scene = load("res://Bandaged/BandagedFile.tscn").instantiate()
 	person.add_child(new_scene)
 	person.show()
 
