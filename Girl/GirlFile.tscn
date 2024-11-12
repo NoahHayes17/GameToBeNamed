@@ -1,0 +1,125 @@
+[gd_scene load_steps=6 format=3 uid="uid://b47hkxc5ns7wo"]
+
+[ext_resource type="Script" path="res://Girl/GirlFile.gd" id="1_b5qac"]
+[ext_resource type="Texture2D" uid="uid://r25viilyjxs7" path="res://assets/whiteGirl/Screenshot 2024-11-01 at 20.34.08.png" id="2_lqe56"]
+[ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="3_i6l5c"]
+[ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="4_a5ul6"]
+[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="5_bcou0"]
+
+[node name="DialogueScene" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_b5qac")
+
+[node name="NPC" type="TextureRect" parent="."]
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 1670.0
+offset_bottom = 2258.0
+texture = ExtResource("2_lqe56")
+
+[node name="Back" type="TextureButton" parent="."]
+offset_left = 1955.0
+offset_top = 190.0
+offset_right = 3013.0
+offset_bottom = 377.0
+texture_normal = ExtResource("3_i6l5c")
+texture_pressed = ExtResource("4_a5ul6")
+texture_hover = ExtResource("4_a5ul6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Back"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 1053.0
+offset_bottom = 175.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_bcou0")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Back[/center]"
+
+[node name="InspectEye" type="TextureButton" parent="."]
+offset_left = 1965.0
+offset_top = 635.0
+offset_right = 3023.0
+offset_bottom = 822.0
+texture_normal = ExtResource("3_i6l5c")
+texture_pressed = ExtResource("4_a5ul6")
+texture_hover = ExtResource("4_a5ul6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InspectEye"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 1053.0
+offset_bottom = 175.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_bcou0")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Inspect eye[/center]"
+
+[node name="InspectVein" type="TextureButton" parent="."]
+offset_left = 1970.0
+offset_top = 1100.0
+offset_right = 3028.0
+offset_bottom = 1294.0
+texture_normal = ExtResource("3_i6l5c")
+texture_pressed = ExtResource("4_a5ul6")
+texture_hover = ExtResource("4_a5ul6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InspectVein"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 1053.0
+offset_bottom = 175.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_bcou0")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Inspect veins[/center]"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1728.0
+offset_top = 2091.0
+offset_right = 2140.0
+offset_bottom = 2261.0
+texture_normal = ExtResource("3_i6l5c")
+texture_pressed = ExtResource("4_a5ul6")
+texture_hover = ExtResource("4_a5ul6")
+
+[node name="Reject" type="TextureButton" parent="."]
+offset_left = 2260.0
+offset_top = 1665.0
+offset_right = 2737.0
+offset_bottom = 1831.0
+texture_normal = ExtResource("3_i6l5c")
+texture_pressed = ExtResource("4_a5ul6")
+texture_hover = ExtResource("4_a5ul6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Reject"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 18.0
+offset_right = 474.0
+offset_bottom = 162.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_bcou0")
+theme_override_font_sizes/normal_font_size = 140
+bbcode_enabled = true
+text = "[center]Reject[/center]"
+
+[connection signal="pressed" from="Back" to="." method="_on_inspect_worker_eye_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="InspectEye" to="." method="_on_inspect_worker_eye_pressed"]
+[connection signal="pressed" from="InspectVein" to="." method="_on_inspect_worker_vein_pressed"]
+[connection signal="pressed" from="Reject" to="." method="_on_reject_pressed"]

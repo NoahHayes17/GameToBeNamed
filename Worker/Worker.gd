@@ -79,6 +79,8 @@ func _on_accept_pressed():
 	print("Player accepted")
 	$NPCText/RichTextLabel.text = npc_accept_response  # NPC's response to acceptance
 	$Advance/RichTextLabel.hide()  # Hide players text after responding
+	get_node("/root/Desktop/Background/Folder/Folder/Worker").show()
+	get_node("/root/Desktop").worker = true
 	end_scene()
 
 # Reject button interaction response
@@ -90,8 +92,6 @@ func _on_reject_pressed():
 
 # Function to end the scene
 func end_scene():
-	var new_scene = load("res://Bandaged/Bandaged.tscn").instantiate()
+	var new_scene = load("res://Desktop/Reminder.tscn").instantiate()
 	get_parent().add_child(new_scene)
 	queue_free()  # Optionally, remove the current scene if needed
-
-	#get_tree().quit()

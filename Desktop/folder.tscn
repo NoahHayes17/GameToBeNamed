@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://tpgrjq1nowhv"]
+[gd_scene load_steps=15 format=3 uid="uid://bng6ujvvr8h26"]
 
 [ext_resource type="StyleBox" uid="uid://cxkpi464je12t" path="res://Desktop/windows_style.tres" id="1_p0irw"]
-[ext_resource type="Script" path="res://Desktop/App.gd" id="2_y2wyg"]
+[ext_resource type="Script" path="res://Desktop/folder.gd" id="2_2lp60"]
 [ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="3_diqpj"]
 [ext_resource type="Texture2D" uid="uid://h20lbm2713bs" path="res://Desktop/Sprite-0003.png" id="4_snea2"]
+[ext_resource type="Texture2D" uid="uid://du04xa8e4fc4" path="res://assets/indian/Screenshot 2024-11-01 at 20.47.04.png" id="5_iuqh6"]
+[ext_resource type="Texture2D" uid="uid://dj1ooar0rcg5c" path="res://assets/asianWhite/Screenshot 2024-11-01 at 20.22.28.png" id="7_0igm3"]
+[ext_resource type="Texture2D" uid="uid://r25viilyjxs7" path="res://assets/whiteGirl/Screenshot 2024-11-01 at 20.34.08.png" id="8_3u4d6"]
+[ext_resource type="Script" path="res://Desktop/File.gd" id="8_uu0bt"]
+[ext_resource type="Texture2D" uid="uid://d1ntmupdpkjoc" path="res://assets/whiteGuy/Screenshot 2024-11-01 at 21.05.17.png" id="9_sxr5o"]
+[ext_resource type="PackedScene" uid="uid://dkviehaykg1j4" path="res://Worker/Worker.tscn" id="10_eoe5h"]
+[ext_resource type="Script" path="res://Desktop/Person.gd" id="10_ldlcs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxh6j"]
 bg_color = Color(0, 0.0313726, 0.513726, 1)
@@ -17,14 +24,15 @@ texture = ExtResource("4_snea2")
 expand_margin_left = 8.0
 expand_margin_right = 8.0
 
-[node name="Interview" type="Panel"]
+[node name="Folder" type="Panel"]
 offset_right = 693.3
 offset_bottom = 552.0
 scale = Vector2(0.988869, 1)
 theme_override_styles/panel = ExtResource("1_p0irw")
-script = ExtResource("2_y2wyg")
+script = ExtResource("2_2lp60")
 
 [node name="Title Bar" type="Panel" parent="."]
+z_index = 10
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -66,4 +74,78 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxTexture_x888o")
 text = "X"
 
+[node name="Folder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Worker" type="Button" parent="Folder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.149
+anchor_bottom = 0.16
+offset_left = 59.6641
+offset_top = 95.0
+offset_right = 61.7041
+offset_bottom = 156.68
+icon = ExtResource("5_iuqh6")
+expand_icon = true
+script = ExtResource("8_uu0bt")
+
+[node name="WhiteHair" type="Button" parent="Folder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.149
+anchor_bottom = 0.16
+offset_left = 273.039
+offset_top = 96.0
+offset_right = 275.079
+offset_bottom = 157.68
+icon = ExtResource("7_0igm3")
+expand_icon = true
+script = ExtResource("8_uu0bt")
+
+[node name="Girl" type="Button" parent="Folder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.149
+anchor_bottom = 0.16
+offset_left = 489.448
+offset_top = 96.0
+offset_right = 491.488
+offset_bottom = 157.68
+icon = ExtResource("8_3u4d6")
+expand_icon = true
+script = ExtResource("8_uu0bt")
+
+[node name="Bandage" type="Button" parent="Folder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.149
+anchor_bottom = 0.16
+offset_left = 56.6304
+offset_top = 307.0
+offset_right = 58.6704
+offset_bottom = 368.68
+icon = ExtResource("9_sxr5o")
+expand_icon = true
+script = ExtResource("8_uu0bt")
+
+[node name="Person" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 12.1351
+offset_top = 63.0
+offset_right = 52.1351
+offset_bottom = 103.0
+script = ExtResource("10_ldlcs")
+
+[node name="DialogueScene" parent="Person" instance=ExtResource("10_eoe5h")]
+
 [connection signal="pressed" from="Title Bar/Hbox Container/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Folder/Worker" to="." method="_on_worker_pressed"]
+[connection signal="pressed" from="Folder/WhiteHair" to="." method="_on_white_hair_pressed"]
+[connection signal="pressed" from="Folder/Girl" to="." method="_on_girl_pressed"]
+[connection signal="pressed" from="Folder/Bandage" to="." method="_on_bandage_pressed"]

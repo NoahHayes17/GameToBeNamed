@@ -5,6 +5,9 @@ var dragging = false
 var drag_offset = Vector2()
 @onready var title_bar = get_node("Title Bar")
 
+func _ready():
+	hide()
+
 # Called every frame while the mouse is moved
 func _process(_delta):
 	if dragging:
@@ -28,4 +31,4 @@ func _input(event):
 
 
 func _on_close_pressed():
-	queue_free()
+	hide()
