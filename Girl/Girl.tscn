@@ -1,120 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://6xqcfhxeumnu"]
+[gd_scene load_steps=6 format=3 uid="uid://6xqcfhxeumnu"]
 
 [ext_resource type="Script" path="res://Girl/Girl.gd" id="1_8l4fv"]
-[ext_resource type="Texture2D" uid="uid://bv3hibxyrptgy" path="res://assets/Misc/Screenshot 2024-11-03 at 20.22.36.png" id="2_byd2q"]
-[ext_resource type="Texture2D" uid="uid://ghmb5x6cox5y" path="res://assets/Misc/Screenshot 2024-11-10 at 11.06.42.png" id="3_jag4b"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="4_vm4wd"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_xp5gc"]
 [ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="6_gl5n3"]
-[ext_resource type="Texture2D" uid="uid://bdyewgn23vr1u" path="res://assets/Misc/Flag.png" id="7_flsv3"]
 [ext_resource type="Texture2D" uid="uid://r25viilyjxs7" path="res://assets/whiteGirl/Screenshot 2024-11-01 at 20.34.08.png" id="8_4ttv4"]
 
 [node name="DialogueScene" type="Node2D"]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_8l4fv")
-
-[node name="Background" type="TextureRect" parent="."]
-offset_left = -108.0
-offset_top = -585.0
-offset_right = 3426.0
-offset_bottom = 2414.0
-texture = ExtResource("2_byd2q")
-expand_mode = 2
-
-[node name="BackgroundCoverUp" type="TextureRect" parent="."]
-offset_left = -47.0
-offset_top = -512.0
-offset_right = 3372.0
-offset_bottom = 2362.0
-texture = ExtResource("3_jag4b")
-
-[node name="Panel" type="Panel" parent="BackgroundCoverUp"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 23.0
-offset_top = 22.0
-offset_right = -14.0
-offset_bottom = 327.0
-grow_horizontal = 2
-
-[node name="ColorRect" type="ColorRect" parent="BackgroundCoverUp/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 2.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.660377, 0.607632, 0.60695, 1)
-
-[node name="Close" type="TextureButton" parent="BackgroundCoverUp/Panel"]
-layout_mode = 0
-offset_left = 2695.0
-offset_top = 58.0
-offset_right = 3340.0
-offset_bottom = 243.0
-texture_normal = ExtResource("4_vm4wd")
-texture_pressed = ExtResource("5_xp5gc")
-texture_hover = ExtResource("5_xp5gc")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundCoverUp/Panel/Close"]
-layout_mode = 0
-offset_left = 217.0
-offset_top = 23.0
-offset_right = 593.0
-offset_bottom = 158.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
-theme_override_font_sizes/normal_font_size = 140
-bbcode_enabled = true
-text = "[center]Close[/center]"
-
-[node name="TextureRect" type="TextureRect" parent="BackgroundCoverUp/Panel/Close"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 36.0
-offset_right = 187.0
-offset_bottom = 134.0
-texture = ExtResource("7_flsv3")
-
-[node name="Time" type="TextureButton" parent="BackgroundCoverUp/Panel"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 61.0
-offset_top = 54.0
-offset_right = 749.0
-offset_bottom = 234.0
-grow_horizontal = 0
-grow_vertical = 0
-texture_normal = ExtResource("5_xp5gc")
-texture_pressed = ExtResource("5_xp5gc")
-texture_hover = ExtResource("5_xp5gc")
-stretch_mode = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundCoverUp/Panel/Time"]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 13.0
-offset_right = 617.0
-offset_bottom = 156.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
-theme_override_font_sizes/normal_font_size = 140
-bbcode_enabled = true
-text = "[center]11:49 PM[/center]"
 
 [node name="NPC" type="TextureRect" parent="."]
 offset_left = 12.0
-offset_top = -51.0
+offset_top = 12.0
 offset_right = 1670.0
 offset_bottom = 2258.0
 texture = ExtResource("8_4ttv4")
 
 [node name="NPCText" type="TextureRect" parent="."]
 offset_left = 1729.0
-offset_top = -50.0
+offset_top = -1.0
 offset_right = 3316.0
 offset_bottom = 507.0
 texture = ExtResource("4_vm4wd")
@@ -198,10 +103,6 @@ theme_override_fonts/normal_font = ExtResource("6_gl5n3")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect veins[/center]"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1681, 1176)
-zoom = Vector2(0.264, 0.28)
 
 [node name="Reject" type="TextureButton" parent="."]
 offset_left = 2872.0

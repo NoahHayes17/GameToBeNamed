@@ -2,26 +2,26 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bb36i8qiqdl26"
-path="res://.godot/imported/Adventurer.ttf-c0b6306a89090be389fab1bbd2d36aba.fontdata"
+uid="uid://dcxo6ll4nfsfh"
+path="res://.godot/imported/MS Sans Serif 8pt.ttf-f4dc730e36b55d500df9dad34b9611df.fontdata"
 
 [deps]
 
-source_file="res://assets/Misc/Adventurer.ttf"
-dest_files=["res://.godot/imported/Adventurer.ttf-c0b6306a89090be389fab1bbd2d36aba.fontdata"]
+source_file="res://assets/MS Sans Serif 8pt.ttf"
+dest_files=["res://.godot/imported/MS Sans Serif 8pt.ttf-f4dc730e36b55d500df9dad34b9611df.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=1
+antialiasing=0
 generate_mipmaps=false
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
-allow_system_fallback=true
+allow_system_fallback=false
 force_autohinter=false
-hinting=1
-subpixel_positioning=1
+hinting=0
+subpixel_positioning=0
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

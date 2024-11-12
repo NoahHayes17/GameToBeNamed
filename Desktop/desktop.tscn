@@ -1,0 +1,127 @@
+[gd_scene load_steps=8 format=3 uid="uid://wafcsv2u40ee"]
+
+[ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="1_ii5lw"]
+[ext_resource type="Script" path="res://Desktop/desktop.gd" id="1_ot6ke"]
+[ext_resource type="StyleBox" uid="uid://cxkpi464je12t" path="res://Desktop/windows_style.tres" id="1_rrp8a"]
+[ext_resource type="Texture2D" uid="uid://bdyewgn23vr1u" path="res://assets/Misc/Flag.png" id="2_o751q"]
+[ext_resource type="Texture2D" uid="uid://ckkysifsblshw" path="res://icons/Microsoft Authentificator.png" id="7_n1qm5"]
+[ext_resource type="Texture2D" uid="uid://b1ia75ejdu7ri" path="res://icons/Google Files.png" id="8_w3v0h"]
+[ext_resource type="Texture2D" uid="uid://wk2bykmeprsx" path="res://icons/Google Hangouts.png" id="9_xy8hr"]
+
+[node name="Desktop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ot6ke")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.501961, 0.498039, 1)
+
+[node name="Taskbar" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -64.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_rrp8a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Taskbar"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = -12.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(119.005, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ii5lw")
+theme_override_styles/normal = ExtResource("1_rrp8a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Taskbar/HBoxContainer/Start"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Taskbar/HBoxContainer/Start/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_o751q")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Taskbar/HBoxContainer/Start/HBoxContainer"]
+custom_minimum_size = Vector2(65.905, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "Start"
+scroll_active = false
+
+[node name="Control2" type="Control" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(25.165, 0)
+layout_direction = 2
+layout_mode = 2
+
+[node name="Separator" type="Panel" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(10, 2)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_rrp8a")
+
+[node name="InterviewLaunch" type="TextureButton" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(59.97, 0)
+layout_mode = 2
+texture_normal = ExtResource("7_n1qm5")
+stretch_mode = 0
+
+[node name="FolderLaunch" type="TextureButton" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(59.97, 0)
+layout_mode = 2
+texture_normal = ExtResource("8_w3v0h")
+stretch_mode = 0
+
+[node name="MEssagerLaunch" type="TextureButton" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(59.97, 0)
+layout_mode = 2
+texture_normal = ExtResource("9_xy8hr")
+stretch_mode = 0
+
+[node name="Separator2" type="Panel" parent="Taskbar/HBoxContainer"]
+custom_minimum_size = Vector2(10, 2)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_rrp8a")
+
+[node name="Control" type="Control" parent="Taskbar/HBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="Taskbar/HBoxContainer/InterviewLaunch" to="." method="_on_interview_launch_pressed"]

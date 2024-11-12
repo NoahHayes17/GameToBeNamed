@@ -28,8 +28,6 @@ func _ready():
 	$InspectVein/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Accept/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$BackgroundCoverUp/Panel/Close/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$BackgroundCoverUp/Panel/Time/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
 # Function to update the dialogue box based on the current line
@@ -92,8 +90,7 @@ func _on_reject_pressed():
 
 # Function to end the scene
 func end_scene():
-	var new_scene = load("res://Doctor/Doctor.tscn").instantiate()
-	get_tree().root.add_child(new_scene)
-	queue_free()  # Optionally, remove the current scene if needed
+	get_parent().get_parent().queue_free() # close window
+	
 
 	#get_tree().quit()

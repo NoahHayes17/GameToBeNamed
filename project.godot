@@ -10,14 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Dialogue3"
-run/main_scene="res://Worker/Worker.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/name="Game"
+run/main_scene="res://Desktop/desktop.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_height=1200
+window/size/mode=3
+window/main_scene="res://Worker/Worker.tscn"
+window/name="Dialogue3"
 
 [rendering]
 

@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://di0epyismj53q"]
+
+[ext_resource type="StyleBox" uid="uid://cxkpi464je12t" path="res://Desktop/windows_style.tres" id="1_k8ral"]
+[ext_resource type="Script" path="res://Desktop/App.gd" id="2_x775c"]
+[ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="3_u55en"]
+[ext_resource type="Texture2D" uid="uid://h20lbm2713bs" path="res://Desktop/Sprite-0003.png" id="4_w02ji"]
+[ext_resource type="PackedScene" uid="uid://dkviehaykg1j4" path="res://Worker/Worker.tscn" id="5_b31wk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxh6j"]
+bg_color = Color(0, 0.0313726, 0.513726, 1)
+border_width_bottom = 2
+
+[sub_resource type="FontVariation" id="FontVariation_iw4t1"]
+base_font = ExtResource("3_u55en")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x888o"]
+texture = ExtResource("4_w02ji")
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+
+[node name="Interview" type="Panel"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -313.0
+offset_top = 42.0
+offset_right = 381.0
+offset_bottom = 594.0
+grow_horizontal = 2
+scale = Vector2(0.988869, 1)
+theme_override_styles/panel = ExtResource("1_k8ral")
+script = ExtResource("2_x775c")
+
+[node name="Title Bar" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fxh6j")
+
+[node name="Hbox Container" type="HBoxContainer" parent="Title Bar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 1.0
+offset_right = -12.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Title Bar/Hbox Container"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_iw4t1")
+theme_override_font_sizes/font_size = 25
+text = "Interview App
+"
+
+[node name="Control" type="Control" parent="Title Bar/Hbox Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Close" type="Button" parent="Title Bar/Hbox Container"]
+layout_direction = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_x888o")
+text = "X"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 14.1576
+offset_top = 67.0
+offset_right = 54.1576
+offset_bottom = 107.0
+
+[node name="DialogueScene" parent="Control" instance=ExtResource("5_b31wk")]
+
+[connection signal="pressed" from="Title Bar/Hbox Container/Close" to="." method="_on_close_pressed"]
