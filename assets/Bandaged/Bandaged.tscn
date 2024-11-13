@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhqfqjh3ikv0t"]
 
 [ext_resource type="PackedScene" uid="uid://dkviehaykg1j4" path="res://Worker/Worker.tscn" id="1_6pnlc"]
-[ext_resource type="Texture2D" uid="uid://d1ntmupdpkjoc" path="res://assets/whiteGuy/Screenshot 2024-11-01 at 21.05.17.png" id="2_htco8"]
+[ext_resource type="Texture2D" uid="uid://d1ntmupdpkjoc" path="res://assets/Bandaged/Screenshot 2024-11-01 at 21.05.17.png" id="2_htco8"]
 
 [node name="DialogueScene" instance=ExtResource("1_6pnlc")]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://do6bxbro52c82"]
 
 [ext_resource type="Script" path="res://Worker/WorkerPopUp.gd" id="1_62mao"]
-[ext_resource type="Texture2D" uid="uid://bnmrn2dqoip2w" path="res://assets/whiteGirl/Screenshot 2024-11-01 at 21.14.01.png" id="2_0g86u"]
+[ext_resource type="Texture2D" uid="uid://bnmrn2dqoip2w" path="res://assets/Girl/Screenshot 2024-11-01 at 21.14.01.png" id="2_0g86u"]
 
 [node name="PopUp" type="Control"]
 layout_mode = 3

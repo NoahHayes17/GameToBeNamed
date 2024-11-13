@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://pd8hlfehw2mu"]
 
 [ext_resource type="Script" path="res://WhiteHair/WhiteHairFile.gd" id="1_q0nuy"]
-[ext_resource type="Texture2D" uid="uid://dj1ooar0rcg5c" path="res://assets/asianWhite/Screenshot 2024-11-01 at 20.22.28.png" id="2_57dfn"]
+[ext_resource type="Texture2D" uid="uid://dj1ooar0rcg5c" path="res://assets/WhiteHair/Screenshot 2024-11-01 at 20.22.28.png" id="2_57dfn"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="3_2s3dv"]
 [ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="4_af7v0"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_uv66r"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dkviehaykg1j4"]
 
-[ext_resource type="Texture2D" uid="uid://du04xa8e4fc4" path="res://assets/indian/Screenshot 2024-11-01 at 20.47.04.png" id="2_2syqe"]
+[ext_resource type="Texture2D" uid="uid://du04xa8e4fc4" path="res://assets/Worker/Screenshot 2024-11-01 at 20.47.04.png" id="2_2syqe"]
 [ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="3_p02cx"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="4_4omhs"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_3nmls"]

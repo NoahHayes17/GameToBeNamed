@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cx76xwduuncup"]
 
 [ext_resource type="Script" path="res://Worker/WorkerFile.gd" id="1_6ixps"]
-[ext_resource type="Texture2D" uid="uid://du04xa8e4fc4" path="res://assets/indian/Screenshot 2024-11-01 at 20.47.04.png" id="2_5a5r7"]
+[ext_resource type="Texture2D" uid="uid://du04xa8e4fc4" path="res://assets/Worker/Screenshot 2024-11-01 at 20.47.04.png" id="2_5a5r7"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="3_i0w6f"]
 [ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="4_gqev3"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_sr8na"]

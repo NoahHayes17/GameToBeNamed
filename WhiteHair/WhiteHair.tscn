@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="4_tx5e1"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_18l65"]
 [ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="6_qu1hs"]
-[ext_resource type="Texture2D" uid="uid://dj1ooar0rcg5c" path="res://assets/asianWhite/Screenshot 2024-11-01 at 20.22.28.png" id="8_cglnv"]
+[ext_resource type="Texture2D" uid="uid://dj1ooar0rcg5c" path="res://assets/WhiteHair/Screenshot 2024-11-01 at 20.22.28.png" id="8_cglnv"]
 
 [node name="DialogueScene" type="Node2D"]
 scale = Vector2(0.2, 0.2)
