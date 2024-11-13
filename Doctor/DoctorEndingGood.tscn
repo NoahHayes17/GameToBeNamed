@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvpbyeauttxei"]
+[gd_scene load_steps=7 format=3 uid="uid://cvpbyeauttxei"]
 
 [ext_resource type="Script" path="res://Doctor/DoctorEndingGood.gd" id="1_en1y0"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="4_emqte"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_ej13g"]
 [ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="6_hk3gf"]
+[ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="6_petau"]
 [ext_resource type="Texture2D" uid="uid://dsdlx8wiorvdq" path="res://assets/Doctor/Doctor.png" id="8_epatm"]
 
 [node name="DialogueScene" type="Node2D"]
@@ -20,15 +21,15 @@ texture = ExtResource("8_epatm")
 offset_left = 1729.0
 offset_top = -50.0
 offset_right = 3316.0
-offset_bottom = 507.0
+offset_bottom = 1397.0
 texture = ExtResource("4_emqte")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NPCText"]
 layout_mode = 0
 offset_left = 144.0
-offset_top = 82.0
+offset_top = 164.0
 offset_right = 1450.0
-offset_bottom = 479.0
+offset_bottom = 1315.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_hk3gf")
 theme_override_font_sizes/normal_font_size = 100
@@ -36,9 +37,9 @@ bbcode_enabled = true
 
 [node name="Advance" type="TextureButton" parent="."]
 offset_left = 1733.0
-offset_top = 674.0
+offset_top = 1676.0
 offset_right = 3327.0
-offset_bottom = 1230.0
+offset_bottom = 2254.0
 texture_normal = ExtResource("4_emqte")
 texture_pressed = ExtResource("5_ej13g")
 texture_hover = ExtResource("5_ej13g")
@@ -50,9 +51,9 @@ layout_mode = 0
 offset_left = 141.0
 offset_top = 73.0
 offset_right = 1454.0
-offset_bottom = 414.0
+offset_bottom = 502.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_hk3gf")
+theme_override_fonts/normal_font = ExtResource("6_petau")
 theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 text = "[wave][center]Close[/center][/wave]"

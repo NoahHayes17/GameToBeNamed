@@ -117,7 +117,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
-text = "Start"
+text = "Next"
 scroll_active = false
 script = ExtResource("5_s8ku0")
 

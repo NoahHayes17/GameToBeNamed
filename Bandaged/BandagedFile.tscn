@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Bandaged/BandageFile.gd" id="1_pkkjl"]
 [ext_resource type="Texture2D" uid="uid://d1ntmupdpkjoc" path="res://assets/Bandaged/Screenshot 2024-11-01 at 21.05.17.png" id="2_kjokv"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="3_puc5i"]
-[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="4_vkr0h"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_itfa6"]
+[ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="5_yegle"]
 
 [node name="DialogueScene" type="Node2D"]
 scale = Vector2(0.2, 0.2)
@@ -35,7 +35,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_vkr0h")
+theme_override_fonts/normal_font = ExtResource("5_yegle")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect eye[/center]"
@@ -58,7 +58,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_vkr0h")
+theme_override_fonts/normal_font = ExtResource("5_yegle")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Back[/center]"
@@ -81,7 +81,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_vkr0h")
+theme_override_fonts/normal_font = ExtResource("5_yegle")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect veins[/center]"
@@ -104,11 +104,12 @@ offset_top = 18.0
 offset_right = 474.0
 offset_bottom = 162.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_vkr0h")
+theme_override_fonts/normal_font = ExtResource("5_yegle")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Reject[/center]"
 
 [connection signal="pressed" from="InspectEye" to="." method="_on_inspect_bandaged_eye_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="InspectVein" to="." method="_on_inspect_bandaged_vein_pressed"]
 [connection signal="pressed" from="Reject" to="." method="_on_reject_pressed"]

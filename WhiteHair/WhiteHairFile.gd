@@ -8,13 +8,11 @@ func _ready():
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	$Back/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-# Reject button interaction response
 func _on_reject_pressed():
 	print("Player rejected")
 	folder.get_node("Folder").get_node("WhiteHair").hide()
 	end_scene()
 
-# Function to end the scene
 func end_scene():
 	folder.get_node("Folder").show()
 	get_parent().hide()

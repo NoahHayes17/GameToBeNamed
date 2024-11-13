@@ -2,7 +2,6 @@ extends Node2D
 
 @export var display_time: float = 4.0
 
-# NPC and player dialogue arrays
 var npc_dialogue_lines: Array = [
 	"All clear, huh? You flagged every single one of them.",
 	"Interesting call. Guess you thought it was better to play it safe, right? To send everyone off to that… facility. Well, I suppose that’s one way to avoid an outbreak.",
@@ -17,7 +16,6 @@ var player_responses: Array = [
 	"[wave]...[/wave]"
 ]
 
-# Track the current dialogue line
 var current_line: int = 0
 
 func _ready():
@@ -28,37 +26,29 @@ func _ready():
 	$Reject/RichTextLabel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	update_dialogue()
 
-# Function to update the dialogue box based on the current line
 func update_dialogue():
 	if current_line < npc_dialogue_lines.size():
-		show_text($NPCText/RichTextLabel, npc_dialogue_lines[current_line])  # Show NPC line gradually
-		$Advance/RichTextLabel.text = player_responses[current_line]  # Show player's response as button text
+		show_text($NPCText/RichTextLabel, npc_dialogue_lines[current_line]) 
+		$Advance/RichTextLabel.text = player_responses[current_line]  
 	else:
-		end_dialogue()  # End dialogue if no more NPC lines
+		end_dialogue()  
 
-# Coroutine to reveal the text character by character
-func show_text(label: RichTextLabel, text: String) -> void:  # Accept Control as the argument
-	label.clear()  # Start with an empty label
-	for character in text:  # Renamed char to character
+func show_text(label: RichTextLabel, text: String) -> void:  
+	label.clear()  
+	for character in text:  
 		label.append_text(character)
-		await get_tree().create_timer(0.05).timeout  # Wait for 0.05 seconds for speed adjustment
+		await get_tree().create_timer(0.05).timeout  
 
-# Advances to the next dialogue line when the player response is pressed
-
-# Ends the dialogue and shows choice buttons
 func end_dialogue():
-	$Advance.hide()  # Hide the advance button
+	$Advance.hide() 
 
-# Advances to the next dialogue line when the player response is pressed
 func _on_advance_pressed():
-	print("Button pressed! Current line:", current_line)  # Debugging line
-	current_line += 1  # Increment to the next dialogue line
+	current_line += 1 
 	update_dialogue()
 
-# Function to end the scene
 func end_scene():
 	var new_scene = load("res://Doctor/Doctor1.tscn").instantiate()
 	get_tree().root.add_child(new_scene)
-	queue_free()  # Optionally, remove the current scene if needed
+	queue_free()  
 
 	#get_tree().quit()

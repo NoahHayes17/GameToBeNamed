@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://WhiteHair/WhiteHairFile.gd" id="1_q0nuy"]
 [ext_resource type="Texture2D" uid="uid://dj1ooar0rcg5c" path="res://assets/WhiteHair/Screenshot 2024-11-01 at 20.22.28.png" id="2_57dfn"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="3_2s3dv"]
-[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="4_af7v0"]
+[ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="5_cdmk0"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_uv66r"]
 
 [node name="DialogueScene" type="Node2D"]
@@ -35,7 +35,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_af7v0")
+theme_override_fonts/normal_font = ExtResource("5_cdmk0")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect eye[/center]"
@@ -58,7 +58,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_af7v0")
+theme_override_fonts/normal_font = ExtResource("5_cdmk0")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Back[/center]"
@@ -81,7 +81,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_af7v0")
+theme_override_fonts/normal_font = ExtResource("5_cdmk0")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect veins[/center]"
@@ -104,7 +104,7 @@ offset_top = 18.0
 offset_right = 474.0
 offset_bottom = 162.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_af7v0")
+theme_override_fonts/normal_font = ExtResource("5_cdmk0")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Reject[/center]"

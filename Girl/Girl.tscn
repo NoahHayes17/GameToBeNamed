@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://6xqcfhxeumnu"]
 
 [ext_resource type="Script" path="res://Girl/Girl.gd" id="1_8l4fv"]
+[ext_resource type="FontFile" uid="uid://dcxo6ll4nfsfh" path="res://assets/MS Sans Serif 8pt.ttf" id="4_pulmp"]
 [ext_resource type="Texture2D" uid="uid://6xvv7xfe1mra" path="res://assets/Misc/PatchRegular.png" id="4_vm4wd"]
 [ext_resource type="Texture2D" uid="uid://caowl4456vs88" path="res://assets/Misc/PatchInverted.png" id="5_xp5gc"]
-[ext_resource type="FontFile" uid="uid://bb36i8qiqdl26" path="res://assets/Misc/Adventurer.ttf" id="6_gl5n3"]
 [ext_resource type="Texture2D" uid="uid://r25viilyjxs7" path="res://assets/Girl/Screenshot 2024-11-01 at 20.34.08.png" id="8_4ttv4"]
 
 [node name="DialogueScene" type="Node2D"]
@@ -27,11 +27,11 @@ texture = ExtResource("4_vm4wd")
 [node name="RichTextLabel" type="RichTextLabel" parent="NPCText"]
 layout_mode = 0
 offset_left = 144.0
-offset_top = 82.0
+offset_top = 66.0
 offset_right = 1450.0
-offset_bottom = 479.0
+offset_bottom = 461.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
+theme_override_fonts/normal_font = ExtResource("4_pulmp")
 theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 
@@ -51,9 +51,9 @@ layout_mode = 0
 offset_left = 141.0
 offset_top = 73.0
 offset_right = 1454.0
-offset_bottom = 414.0
+offset_bottom = 501.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
+theme_override_fonts/normal_font = ExtResource("4_pulmp")
 theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 text = "[wave][center]Close[/center][/wave]"
@@ -76,12 +76,13 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
+theme_override_fonts/normal_font = ExtResource("4_pulmp")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect eye[/center]"
 
 [node name="InspectVein" type="TextureButton" parent="."]
+visible = false
 offset_left = 2016.0
 offset_top = 1692.0
 offset_right = 3074.0
@@ -99,7 +100,7 @@ offset_top = 20.0
 offset_right = 1053.0
 offset_bottom = 175.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
+theme_override_fonts/normal_font = ExtResource("4_pulmp")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Inspect veins[/center]"
@@ -122,7 +123,7 @@ offset_top = 18.0
 offset_right = 474.0
 offset_bottom = 162.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
+theme_override_fonts/normal_font = ExtResource("4_pulmp")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Reject[/center]"
@@ -130,7 +131,7 @@ text = "[center]Reject[/center]"
 [node name="Accept" type="TextureButton" parent="."]
 offset_left = 1731.0
 offset_top = 2093.0
-offset_right = 2205.0
+offset_right = 2260.0
 offset_bottom = 2259.0
 texture_normal = ExtResource("4_vm4wd")
 texture_pressed = ExtResource("5_xp5gc")
@@ -142,10 +143,10 @@ stretch_mode = 0
 layout_mode = 0
 offset_left = 1.0
 offset_top = 18.0
-offset_right = 474.0
+offset_right = 524.0
 offset_bottom = 162.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("6_gl5n3")
+theme_override_fonts/normal_font = ExtResource("4_pulmp")
 theme_override_font_sizes/normal_font_size = 140
 bbcode_enabled = true
 text = "[center]Accept[/center]"
